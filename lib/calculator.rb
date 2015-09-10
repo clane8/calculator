@@ -1,10 +1,10 @@
 class Calculator
 
-  def add *numbers
+  def add (*numbers)
     numbers.inject(:+)
   end
 
-  def subtract *numbers
+  def subtract (*numbers)
   	numbers.inject(:-)
-  
+  end
 end
