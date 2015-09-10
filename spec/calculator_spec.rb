@@ -23,5 +23,18 @@ describe Calculator do
       expect(calc.add 2, 4, 3).to eq 9
     end
   end
+
+  describe "#subtract" do
+    it "returns an integer" do
+      expect(calc.subtract 3, 2).to be_an Integer
+    end
+
+    #context "when subtracting zero" do
+    #  it "returns the integer" do
+    #    expect(calc.subtract 5, 0).to eq 5
+    #  end
+    #end
+
+
   
 end
