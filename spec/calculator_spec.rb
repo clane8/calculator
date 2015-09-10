@@ -28,15 +28,25 @@ describe Calculator do
     it "returns an integer" do
       expect(calc.subtract 3, 2).to be_an Integer
     end
-
+  
     context "when subtracting zero" do
       it "returns the integer" do
         expect(calc.subtract 5, 0).to eq 5
       end
     end
 
+    context "when subracting an integer from itself" do
+      it "returns zero" do
+        expect(calc.subtract 5, 5).to eq 0
+      end
+    end
+
+    it "is dependent on the operation order" do
+      expect(calc.subtract 5,4).not_to eq calc.subtract(4,5)
+    end
+  end
 
   
 end
-end
+
 
